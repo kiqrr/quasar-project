@@ -1,32 +1,54 @@
 <template>
   <q-page class="">
     <header>
-      <nav
-        class="full-width q-px-xl bg-yellow"
-        style="height: 100px; padding-left: 10%"
-      >
-        <div class="row">
-          <div class="q-mr-xl">
+      <div class="full-width" style="height: 100px; background-color: #ffe600">
+        <div class="row flex-center">
+          <div class="q-mr-sm">
             <q-img
               src="src/assets/LOGOML.png"
               spinner-color="white"
               style="height: 34px; width: 134px"
             />
-            <div>Informe seu CEP</div>
+            <div class="">Informe seu CEP</div>
           </div>
-          <div class="q-mr-xl">
-            <div>SEARCH INPUT</div>
-            <div>
-              Categorias Ofertas Histórico Supermercado Moda Mercado PlayGRÁTIS
-              Vender Contato
+          <div class="q-mx-xl">
+            <q-input
+              filled
+              dense
+              bg-color="white"
+              placeholder="Buscar produtos, marcas e muito mais..."
+              color=""
+              v-model="text"
+              :readonly="readonly"
+              :disable="disable"
+            >
+              <template v-slot:append>
+                <q-icon name="search" />
+              </template>
+            </q-input>
+            <div class="" style="font-family: Arial, Helvetica, sans-serif">
+              <q-btn no-caps flat style="color: #000" label="Categorias" />
+              <q-btn no-caps flat style="color: #000" label="Ofertas" />
+              <q-btn no-caps flat style="color: #000" label="Histórico" />
+              <q-btn no-caps flat style="color: #000" label="Supermercado" />
+              <q-btn no-caps flat style="color: #000" label="Moda" />
+              <q-btn no-caps flat style="color: #000" label="Mercado Play" />
+              <q-btn no-caps flat style="color: #000" label="Vender" />
+              <q-btn no-caps flat style="color: #000" label="Contato" />
             </div>
           </div>
-          <div class="">
-            <div>Assinatura</div>
-            <div>Crie a sua conta / Entre / Compras</div>
+          <div class="q-mt-md">
+            <q-img
+              src="src/assets/D_NQ_904735-MLA77640197882_072024-OO.webp"
+              spinner-color="white"
+              style="width: 120%"
+            />
+            <q-btn no-caps flat style="color: #000" label="Crie a sua conta" />
+            <q-btn no-caps flat style="color: #000" label="Entre" />
+            <q-btn no-caps flat style="color: #000" label="Compras" />
           </div>
         </div>
-      </nav>
+      </div>
       <div class="">
         <q-carousel
           animated
